@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-11-03T11:47:25.738414",
+  "total_books": 4,
+  "successful": 4,
+  "failed": 0,
+  "total_pages_expected": 1040,
+  "total_pages_actual": 1040,
+  "total_empty_pages": 1,
+  "total_characters": 977100,
+  "details": [
+    {
+      "book_id": 1,
+      "title": "Bahasa Indonesia: Aku Bisa! (Edisi Revisi)",
+      "filename": "Bahasa_Indonesia_BS_KLS_I_Rev.pdf",
+      "status": "success",
+      "output_file": "C:\\Users\\user\\Documents\\SEMESTER 7\\BIG DATA\\BIGDATA_SIBI\\extracted_text\\raw\\book_001_SD_sd.txt",
+      "expected_pages": 248,
+      "extracted_pages": 248,
+      "empty_pages": 0,
+      "total_characters": 100997
+    },
+    {
+      "book_id": 2,
+      "title": "Bahasa Indonesia: Kawan Seiring (Edisi Revisi)",
+      "filename": "Indonesia_BS_KLS_III_Revv.pdf",
+      "status": "success",
+      "output_file": "C:\\Users\\user\\Documents\\SEMESTER 7\\BIG DATA\\BIGDATA_SIBI\\extracted_text\\raw\\book_002_SD_sd.txt",
+      "expected_pages": 208,
+      "extracted_pages": 208,
+      "empty_pages": 0,
+      "total_characters": 147272
+    },
+    {
+      "book_id": 3,
+      "title": "Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi)",
+      "filename": "Bahasa_Indonesia_BS_KLS_VII_Rev.pdf",
+      "status": "success",
+      "output_file": "C:\\Users\\user\\Documents\\SEMESTER 7\\BIG DATA\\BIGDATA_SIBI\\extracted_text\\raw\\book_003_SMP_mp.txt",
+      "expected_pages": 272,
+      "extracted_pages": 272,
+      "empty_pages": 0,
+      "total_characters": 332041
+    },
+    {
+      "book_id": 4,
+      "title": "Bahasa Indonesia untuk SMP/MTs Kelas VII",
+      "filename": "B Indonesia SMP Kelas 7 BS press.pdf",
+      "status": "success",
+      "output_file": "C:\\Users\\user\\Documents\\SEMESTER 7\\BIG DATA\\BIGDATA_SIBI\\extracted_text\\raw\\book_004_SMP_optional.txt",
+      "expected_pages": 312,
+      "extracted_pages": 312,
+      "empty_pages": 1,
+      "total_characters": 396790
+    }
+  ]
+}

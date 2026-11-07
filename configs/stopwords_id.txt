@@ -1,0 +1,198 @@
+# ==============================================================================
+# DAFTAR STOPWORDS BAHASA INDONESIA - PROYEK BIGDATA_SIBI
+# ==============================================================================
+# Disusun secara lokal untuk teks buku pelajaran Bahasa Indonesia (SIBI).
+# Berisi kata-kata fungsi (function words): konjungsi, preposisi, pronomina,
+# partikel penegas, kata bantu aspek/modalitas, dan kata tugas umum.
+#
+# PENTING:
+# Kata-kata bermakna substantif seperti:
+# - buku, bahasa, indonesia, membaca, menulis, siswa, belajar, sekolah, dll.
+# SENGAJA TIDAK dimasukkan agar frekuensi kata kunci esensial tetap terjaga.
+# File ini dapat disunting atau ditambah secara manual jika diperlukan.
+# ==============================================================================
+
+# Kata Hubung (Konjungsi)
+yang
+dan
+atau
+tetapi
+tapi
+melainkan
+sedangkan
+padahal
+lalu
+kemudian
+serta
+bahwa
+karena
+sebab
+sehingga
+maka
+jika
+kalau
+jikalau
+apabila
+asalkan
+agar
+supaya
+biar
+biarpun
+meskipun
+walaupun
+kendatipun
+sekalipun
+seperti
+sebagai
+laksana
+bagaikan
+ibarat
+bak
+demi
+hingga
+sampai
+sambil
+seraya
+sewaktu
+tatkala
+ketika
+saat
+setelah
+sesudah
+sebelum
+sehabis
+sejak
+semenjak
+
+# Kata Depan (Preposisi)
+di
+ke
+dari
+pada
+untuk
+bagi
+tentang
+terhadap
+daripada
+oleh
+kepada
+bersama
+beserta
+mengenai
+menurut
+seputar
+menjelang
+sekitar
+antara
+dengan
+dalam
+
+# Kata Ganti (Pronomina)
+saya
+aku
+daku
+kami
+kita
+kamu
+engkau
+kau
+kalian
+dia
+ia
+beliau
+mereka
+ini
+itu
+tersebut
+begini
+begitu
+demikian
+
+# Kata Tanya (Interogativa)
+apa
+siapa
+mana
+bagaimana
+mengapa
+kenapa
+kapan
+berapa
+bilamana
+
+# Kata Bantu Aspek & Modalitas
+akan
+sedang
+telah
+sudah
+belum
+pernah
+mau
+hendak
+ingin
+bisa
+dapat
+boleh
+harus
+mesti
+wajib
+perlu
+usah
+patut
+jangan
+tidak
+tak
+bukan
+tanpa
+
+# Kata Keterangan Derajat & Kuantitas
+sangat
+amat
+sekali
+lebih
+paling
+kurang
+cukup
+agak
+makin
+kian
+terlalu
+banyak
+sedikit
+semua
+seluruh
+segala
+tiap
+setiap
+masing-masing
+para
+
+# Kata Kopula & Eksistensial
+adalah
+ialah
+merupakan
+yaitu
+yakni
+ada
+
+# Partikel Penegas & Kata Tugas Lainnya
+lah
+kah
+pun
+tah
+jua
+kan
+kok
+sih
+deh
+ya
+toh
+hanya
+saja
+pula
+juga
+tentu
+pasti
+memang
+bahkan
+malah
+lagi

@@ -1,0 +1,25 @@
+TAHAP VALIDASI DAN PERBAIKAN METADATA SELESAI
+
+File yang diperbaiki:
+1. metadata/books.csv - Didafix header, penulis (semicolon), dan filename
+2. README.md - Ditulis ulang dengan encoding UTF-8 BOM
+
+Perubahan pada books.csv:
+- Kolom author dipisahkan dengan titik koma (;) bukan koma atau "dan"
+- Setiap baris memiliki tepat 12 kolom
+- Status dataset: 3 primary + 1 optional_comparison
+- filename book 4 sesuai dengan PDF asli
+
+Perubahan README.md:
+- Encoding UTF-8 dengan BOM untuk Windows PowerShell
+- 10 section lengkap (Identitas, Tujuan, Sumber, Inventaris, Struktur, Pipeline, Folder, Status, Tahapan Selanjutnya, Keamanan)
+- Semua 4 buku tercatat dalam inventaris
+
+TIDAK DILAKUKAN:
+- Menghapus/memindahkan/mengganti nama file PDF
+- Membuat kode PDF extraction, preprocessing, Mapper, Reducer
+- Menjalankan Hadoop atau MapReduce
+- Mengubah folder hadoop-wordcount
+- Menginstal package Python ekstra
+
+Semua file PDF masih ada di dataset/raw/ tanpa berubah.

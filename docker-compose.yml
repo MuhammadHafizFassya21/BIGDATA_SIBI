@@ -1,0 +1,136 @@
+# ==============================================================================
+# Docker Compose Specification for Project BIGDATA_SIBI
+# Mode: Hadoop MapReduce LocalJobRunner + HDFS + MinIO Object Storage
+# ==============================================================================
+# ARCHITECTURE NOTE:
+# MapReduce execution runs in LocalJobRunner mode inside the NameNode container.
+# No YARN ResourceManager or NodeManager is deployed. HDFS provides logically
+# distributed storage with 1 DataNode (dfs.replication=1).
+# MinIO provides S3-compatible object storage.
+# ==============================================================================
+
+version: "3.8"
+
+networks:
+  sibi_network:
+    driver: bridge
+    name: sibi_network
+
+volumes:
+  hadoop_namenode:
+    name: sibi_hadoop_namenode_data
+  hadoop_datanode:
+    name: sibi_hadoop_datanode_data
+  minio_data:
+    name: sibi_minio_data
+
+services:
+  # ----------------------------------------------------------------------------
+  # MinIO Object Storage (S3-compatible)
+  # ----------------------------------------------------------------------------
+  minio:
+    image: cgr.dev/chainguard/minio:latest
+    container_name: sibi_minio
+    hostname: minio
+    restart: "no"
+    command: server /data --console-address ":9001"
+    env_file:
+      - ./configs/minio/minio.env
+    ports:
+      # Bound strictly to 127.0.0.1 (localhost) to prevent public exposure
+      - "127.0.0.1:19000:9000"   # MinIO S3 API Endpoint
+      - "127.0.0.1:19001:9001"   # MinIO Web Console UI
+    volumes:
+      - minio_data:/data
+    networks:
+      - sibi_network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 768M
+        reservations:
+          cpus: "0.10"
+          memory: 256M
+
+  # ----------------------------------------------------------------------------
+  # MinIO Client (CLI Administration Utility - Optional Profile)
+  # ----------------------------------------------------------------------------
+  minio-client:
+    image: minio/mc:RELEASE.2024-05-09T17-04-24Z
+    container_name: sibi_minio_client
+    profiles: ["tools"]
+    restart: "no"
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["tail -f /dev/null"]
+    depends_on:
+      - minio
+    networks:
+      - sibi_network
+
+  # ----------------------------------------------------------------------------
+  # Hadoop NameNode + LocalJobRunner Execution Master
+  # ----------------------------------------------------------------------------
+  namenode:
+    build:
+      context: ./docker/hadoop
+      dockerfile: Dockerfile
+    image: sibi-hadoop-namenode:3.2.1-py3
+    container_name: sibi_namenode
+    hostname: namenode
+    restart: "no"
+    env_file:
+      - ./configs/hadoop/hadoop.env
+    environment:
+      - CLUSTER_NAME=sibi_hadoop_cluster
+    ports:
+      # NameNode Web UI bound to localhost
+      - "127.0.0.1:9870:9870"
+      # NOTE: Port 9000 (HDFS RPC) is INTENTIONALLY NOT exposed to host Windows
+      # to prevent collision with MinIO S3 API on localhost:9000.
+      # DataNode and intra-cluster jobs access HDFS via internal hdfs://namenode:9000.
+    volumes:
+      - hadoop_namenode:/hadoop/dfs/name
+      # Mount project workspace assets
+      - ./dataset/processed:/workspace/dataset/processed:ro
+      - ./scripts/mapreduce:/workspace/scripts/mapreduce:ro
+      - ./output/mapreduce:/workspace/output/mapreduce:rw
+      - ./logs:/workspace/logs:rw
+    networks:
+      - sibi_network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 768M
+        reservations:
+          cpus: "0.25"
+          memory: 384M
+
+  # ----------------------------------------------------------------------------
+  # Hadoop DataNode (HDFS Storage Block Daemon)
+  # ----------------------------------------------------------------------------
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: sibi_datanode
+    hostname: datanode
+    restart: "no"
+    depends_on:
+      - namenode
+    env_file:
+      - ./configs/hadoop/hadoop.env
+    environment:
+      - SERVICE_PRECONDITION=namenode:9870
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+    networks:
+      - sibi_network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+        reservations:
+          cpus: "0.20"
+          memory: 256M
+

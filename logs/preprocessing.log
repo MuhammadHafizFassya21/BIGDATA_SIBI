@@ -1,0 +1,78 @@
+[2026-11-04 09:52:19] [INFO] ==================================================================
+[2026-11-04 09:52:19] [INFO] MEMULAI TAHAP 3: TEXT PREPROCESSING BAHASA INDONESIA SIBI
+[2026-11-04 09:52:19] [INFO] ==================================================================
+[2026-11-04 09:52:19] [INFO] Base Directory: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI
+[2026-11-04 09:52:19] [INFO] Stopwords File: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\configs\stopwords_id.txt
+[2026-11-04 09:52:19] [INFO] Exclude Single Character Tokens: True
+[2026-11-04 09:52:19] [INFO] Dry Run Mode: True
+[2026-11-04 09:52:19] [INFO] Metadata berhasil dibaca: 4 entri buku ditemukan.
+[2026-11-04 09:52:19] [INFO] Berhasil memuat 166 stopwords dari stopwords_id.txt
+[2026-11-04 09:52:19] [INFO] --- Memproses Book ID 1: Bahasa Indonesia: Aku Bisa! (Edisi Revisi) (book_001_SD_sd.txt) ---
+[2026-11-04 09:52:19] [INFO] Selesai: 106,345 char, Cleaning: 15,162 -> 14,173 token, Syllables removed: 66, Single-char excluded: 956, Stopwords removed: 2,914, Final tokens: 10,303 (Unique: 2,292)
+[2026-11-04 09:52:19] [INFO] --- Memproses Book ID 2: Bahasa Indonesia: Kawan Seiring (Edisi Revisi) (book_002_SD_sd.txt) ---
+[2026-11-04 09:52:19] [INFO] Selesai: 151,740 char, Cleaning: 20,562 -> 19,890 token, Syllables removed: 1, Single-char excluded: 1,084, Stopwords removed: 4,048, Final tokens: 14,758 (Unique: 2,535)
+[2026-11-04 09:52:19] [INFO] --- Memproses Book ID 3: Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi) (book_003_SMP_mp.txt) ---
+[2026-11-04 09:52:19] [INFO] Selesai: 337,917 char, Cleaning: 44,275 -> 43,476 token, Syllables removed: 4, Single-char excluded: 2,064, Stopwords removed: 9,415, Final tokens: 31,997 (Unique: 5,854)
+[2026-11-04 09:52:19] [INFO] --- Memproses Book ID 4: Bahasa Indonesia untuk SMP/MTs Kelas VII (book_004_SMP_optional.txt) ---
+[2026-11-04 09:52:19] [INFO] Selesai: 403,546 char, Cleaning: 52,445 -> 51,343 token, Syllables removed: 8, Single-char excluded: 1,659, Stopwords removed: 9,984, Final tokens: 39,700 (Unique: 6,325)
+[2026-11-04 09:52:20] [INFO] ==================================================================
+[2026-11-04 09:52:20] [INFO] PREPROCESSING BERHASIL DISELESAIKAN SECARA LENGKAP & VALID
+[2026-11-04 09:52:20] [INFO] ==================================================================
+[2026-11-04 09:52:51] [INFO] ==================================================================
+[2026-11-04 09:52:51] [INFO] MEMULAI TAHAP 3: TEXT PREPROCESSING BAHASA INDONESIA SIBI
+[2026-11-04 09:52:51] [INFO] ==================================================================
+[2026-11-04 09:52:51] [INFO] Base Directory: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI
+[2026-11-04 09:52:51] [INFO] Stopwords File: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\configs\stopwords_id.txt
+[2026-11-04 09:52:51] [INFO] Exclude Single Character Tokens: True
+[2026-11-04 09:52:51] [INFO] Dry Run Mode: False
+[2026-11-04 09:52:51] [INFO] Metadata berhasil dibaca: 4 entri buku ditemukan.
+[2026-11-04 09:52:51] [INFO] Berhasil memuat 166 stopwords dari stopwords_id.txt
+[2026-11-04 09:52:51] [INFO] --- Memproses Book ID 1: Bahasa Indonesia: Aku Bisa! (Edisi Revisi) (book_001_SD_sd.txt) ---
+[2026-11-04 09:52:51] [INFO] Selesai: 106,345 char, Cleaning: 15,162 -> 14,173 token, Syllables removed: 66, Single-char excluded: 956, Stopwords removed: 2,914, Final tokens: 10,303 (Unique: 2,292)
+[2026-11-04 09:52:51] [INFO] --- Memproses Book ID 2: Bahasa Indonesia: Kawan Seiring (Edisi Revisi) (book_002_SD_sd.txt) ---
+[2026-11-04 09:52:51] [INFO] Selesai: 151,740 char, Cleaning: 20,562 -> 19,890 token, Syllables removed: 1, Single-char excluded: 1,084, Stopwords removed: 4,048, Final tokens: 14,758 (Unique: 2,535)
+[2026-11-04 09:52:51] [INFO] --- Memproses Book ID 3: Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi) (book_003_SMP_mp.txt) ---
+[2026-11-04 09:52:52] [INFO] Selesai: 337,917 char, Cleaning: 44,275 -> 43,476 token, Syllables removed: 4, Single-char excluded: 2,064, Stopwords removed: 9,415, Final tokens: 31,997 (Unique: 5,854)
+[2026-11-04 09:52:52] [INFO] --- Memproses Book ID 4: Bahasa Indonesia untuk SMP/MTs Kelas VII (book_004_SMP_optional.txt) ---
+[2026-11-04 09:52:52] [INFO] Selesai: 403,546 char, Cleaning: 52,445 -> 51,343 token, Syllables removed: 8, Single-char excluded: 1,659, Stopwords removed: 9,984, Final tokens: 39,700 (Unique: 6,325)
+[2026-11-04 09:52:52] [INFO] Menyimpan output bersih per buku: book_001_SD_sd_cleaned.txt
+[2026-11-04 09:52:52] [INFO] Menyimpan output bersih per buku: book_002_SD_sd_cleaned.txt
+[2026-11-04 09:52:52] [INFO] Menyimpan output bersih per buku: book_003_SMP_mp_cleaned.txt
+[2026-11-04 09:52:52] [INFO] Menyimpan output bersih per buku: book_004_SMP_optional_cleaned.txt
+[2026-11-04 09:52:52] [INFO] Menyimpan gabungan Bag of Words TSV: bow_input.tsv (96,758 baris)
+[2026-11-04 09:52:52] [INFO] Menyimpan pendamping Bag of Words TSV (Primary only): bow_input_primary.tsv (57,058 baris)
+[2026-11-04 09:52:52] [INFO] Manifest disimpan: bow_manifest.json
+[2026-11-04 09:52:52] [INFO] Laporan JSON disimpan: preprocessing_report.json
+[2026-11-04 09:52:52] [INFO] Laporan CSV disimpan: preprocessing_report.csv
+[2026-11-04 09:52:52] [INFO] ==================================================================
+[2026-11-04 09:52:52] [INFO] PREPROCESSING BERHASIL DISELESAIKAN SECARA LENGKAP & VALID
+[2026-11-04 09:52:52] [INFO] ==================================================================
+[2026-11-04 09:56:07] [INFO] ==================================================================
+[2026-11-04 09:56:07] [INFO] MEMULAI TAHAP 3: TEXT PREPROCESSING BAHASA INDONESIA SIBI
+[2026-11-04 09:56:07] [INFO] ==================================================================
+[2026-11-04 09:56:07] [INFO] Base Directory: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI
+[2026-11-04 09:56:07] [INFO] Stopwords File: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\configs\stopwords_id.txt
+[2026-11-04 09:56:07] [INFO] Exclude Single Character Tokens: True
+[2026-11-04 09:56:07] [INFO] Dry Run Mode: False
+[2026-11-04 09:56:07] [INFO] Metadata berhasil dibaca: 4 entri buku ditemukan.
+[2026-11-04 09:56:07] [INFO] Berhasil memuat 169 stopwords dari stopwords_id.txt
+[2026-11-04 09:56:07] [INFO] --- Memproses Book ID 1: Bahasa Indonesia: Aku Bisa! (Edisi Revisi) (book_001_SD_sd.txt) ---
+[2026-11-04 09:56:07] [INFO] Selesai: 106,345 char, Cleaning: 15,162 -> 14,173 token, Syllables removed: 66, Single-char excluded: 956, Stopwords removed: 3,352, Final tokens: 9,865 (Unique: 2,289)
+[2026-11-04 09:56:07] [INFO] --- Memproses Book ID 2: Bahasa Indonesia: Kawan Seiring (Edisi Revisi) (book_002_SD_sd.txt) ---
+[2026-11-04 09:56:07] [INFO] Selesai: 151,740 char, Cleaning: 20,562 -> 19,890 token, Syllables removed: 1, Single-char excluded: 1,084, Stopwords removed: 4,869, Final tokens: 13,937 (Unique: 2,532)
+[2026-11-04 09:56:07] [INFO] --- Memproses Book ID 3: Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi) (book_003_SMP_mp.txt) ---
+[2026-11-04 09:56:08] [INFO] Selesai: 337,917 char, Cleaning: 44,275 -> 43,476 token, Syllables removed: 4, Single-char excluded: 2,064, Stopwords removed: 11,333, Final tokens: 30,079 (Unique: 5,851)
+[2026-11-04 09:56:08] [INFO] --- Memproses Book ID 4: Bahasa Indonesia untuk SMP/MTs Kelas VII (book_004_SMP_optional.txt) ---
+[2026-11-04 09:56:08] [INFO] Selesai: 403,546 char, Cleaning: 52,445 -> 51,343 token, Syllables removed: 8, Single-char excluded: 1,659, Stopwords removed: 12,671, Final tokens: 37,013 (Unique: 6,322)
+[2026-11-04 09:56:08] [INFO] Menyimpan output bersih per buku: book_001_SD_sd_cleaned.txt
+[2026-11-04 09:56:08] [INFO] Menyimpan output bersih per buku: book_002_SD_sd_cleaned.txt
+[2026-11-04 09:56:08] [INFO] Menyimpan output bersih per buku: book_003_SMP_mp_cleaned.txt
+[2026-11-04 09:56:08] [INFO] Menyimpan output bersih per buku: book_004_SMP_optional_cleaned.txt
+[2026-11-04 09:56:08] [INFO] Menyimpan gabungan Bag of Words TSV: bow_input.tsv (90,894 baris)
+[2026-11-04 09:56:08] [INFO] Menyimpan pendamping Bag of Words TSV (Primary only): bow_input_primary.tsv (53,881 baris)
+[2026-11-04 09:56:08] [INFO] Manifest disimpan: bow_manifest.json
+[2026-11-04 09:56:08] [INFO] Laporan JSON disimpan: preprocessing_report_20261104_095608.json
+[2026-11-04 09:56:08] [INFO] Laporan CSV disimpan: preprocessing_report_20261104_095608.csv
+[2026-11-04 09:56:08] [INFO] ==================================================================
+[2026-11-04 09:56:08] [INFO] PREPROCESSING BERHASIL DISELESAIKAN SECARA LENGKAP & VALID
+[2026-11-04 09:56:08] [INFO] ==================================================================

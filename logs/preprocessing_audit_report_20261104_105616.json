@@ -1,0 +1,588 @@
+{
+  "audit_timestamp": "2026-11-04T10:56:16.495517",
+  "pipeline_stage": "AUDIT_TAHAP_3_TEXT_PREPROCESSING_REVISED",
+  "audit_summary": {
+    "total_checks": 64,
+    "pass_count": 64,
+    "warning_count": 0,
+    "fail_count": 0
+  },
+  "audit_checks": [
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Token Count (book_001_SD_sd_cleaned.txt)",
+      "target_value": "9865",
+      "actual_value": "9865",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah baris token pada berkas bersih book_001_SD_sd_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Vocabulary Count (book_001_SD_sd_cleaned.txt)",
+      "target_value": "2289",
+      "actual_value": "2289",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah kata unik pada berkas bersih book_001_SD_sd_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Empty Lines (book_001_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Tidak boleh ada baris kosong dalam file token"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Tokens with Whitespace (book_001_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token tidak boleh mengandung spasi atau tab"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Tokens with Uppercase (book_001_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Semua karakter huruf harus lowercase (case folding)"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 1 Tokens in Stopwords (book_001_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token hasil bersih tidak boleh mengandung stopwords"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Token Count (book_002_SD_sd_cleaned.txt)",
+      "target_value": "13937",
+      "actual_value": "13937",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah baris token pada berkas bersih book_002_SD_sd_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Vocabulary Count (book_002_SD_sd_cleaned.txt)",
+      "target_value": "2532",
+      "actual_value": "2532",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah kata unik pada berkas bersih book_002_SD_sd_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Empty Lines (book_002_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Tidak boleh ada baris kosong dalam file token"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Tokens with Whitespace (book_002_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token tidak boleh mengandung spasi atau tab"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Tokens with Uppercase (book_002_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Semua karakter huruf harus lowercase (case folding)"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 2 Tokens in Stopwords (book_002_SD_sd_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token hasil bersih tidak boleh mengandung stopwords"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Token Count (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "30079",
+      "actual_value": "30079",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah baris token pada berkas bersih book_003_SMP_mp_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Vocabulary Count (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "5851",
+      "actual_value": "5851",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah kata unik pada berkas bersih book_003_SMP_mp_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Empty Lines (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Tidak boleh ada baris kosong dalam file token"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Tokens with Whitespace (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token tidak boleh mengandung spasi atau tab"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Tokens with Uppercase (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Semua karakter huruf harus lowercase (case folding)"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 3 Tokens in Stopwords (book_003_SMP_mp_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token hasil bersih tidak boleh mengandung stopwords"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Token Count (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "37013",
+      "actual_value": "37013",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah baris token pada berkas bersih book_004_SMP_optional_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Vocabulary Count (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "6322",
+      "actual_value": "6322",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah kata unik pada berkas bersih book_004_SMP_optional_cleaned.txt"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Empty Lines (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Tidak boleh ada baris kosong dalam file token"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Tokens with Whitespace (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token tidak boleh mengandung spasi atau tab"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Tokens with Uppercase (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Semua karakter huruf harus lowercase (case folding)"
+    },
+    {
+      "category": "Cleaned Files",
+      "check_name": "Book 4 Tokens in Stopwords (book_004_SMP_optional_cleaned.txt)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Token hasil bersih tidak boleh mengandung stopwords"
+    },
+    {
+      "category": "Vocabulary Audit",
+      "check_name": "Official Combined Corpus Unique Vocabulary (len(set(tokens)))",
+      "target_value": "11026",
+      "actual_value": "11026",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Vocabulary aktual dihitung secara independen menggunakan len(set(tokens)) dari gabungan empat berkas cleaned menghasilkan tepat 11026 kata unik. Nilai ini cocok persis dengan preprocessing_report_20261104_095608.json. Penjumlahan individual (16994) tidak digunakan karena kata-kata umum beririsan lintas buku. Angka 11.026 ditetapkan sebagai angka resmi proyek."
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Total Rows",
+      "target_value": "90894",
+      "actual_value": "90894",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Total baris pada bow_input.tsv harus 90,894 tanpa header"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Column Count Check (Exact 2 per row)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Setiap baris harus memiliki tepat 2 kolom dipisahkan oleh TAB"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Empty Token Check",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Tidak boleh ada token kosong pada kolom kedua"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Book ID Sequence Monotonicity (1->2->3->4)",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Urutan blok identitas buku harus strictly monotonic ascending"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Line-by-Line Token Content Match",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Kesesuaian identik baris demi baris antara TSV dengan gabungan berkas cleaned"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Rows for Book ID 1",
+      "target_value": "9865",
+      "actual_value": "9865",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah token bertag book_id=1 dalam TSV"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Rows for Book ID 2",
+      "target_value": "13937",
+      "actual_value": "13937",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah token bertag book_id=2 dalam TSV"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Rows for Book ID 3",
+      "target_value": "30079",
+      "actual_value": "30079",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah token bertag book_id=3 dalam TSV"
+    },
+    {
+      "category": "TSV Audit",
+      "check_name": "bow_input.tsv Rows for Book ID 4",
+      "target_value": "37013",
+      "actual_value": "37013",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Jumlah token bertag book_id=4 dalam TSV"
+    },
+    {
+      "category": "Primary TSV Audit",
+      "check_name": "bow_input_primary.tsv Total Rows",
+      "target_value": "53881",
+      "actual_value": "53881",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Total baris dataset utama harus 53,881"
+    },
+    {
+      "category": "Primary TSV Audit",
+      "check_name": "bow_input_primary.tsv Book ID 4 Exclusion Check",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Book ID 4 (opsional) tidak boleh muncul dalam primary dataset"
+    },
+    {
+      "category": "Primary TSV Audit",
+      "check_name": "bow_input_primary.tsv Line-by-Line Match with Books 1-3",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Kesesuaian identik baris demi baris antara primary TSV dengan Books 1-3"
+    },
+    {
+      "category": "Manifest Audit",
+      "check_name": "Manifest Books Count",
+      "target_value": "4",
+      "actual_value": "4",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Manifest harus mendaftarkan tepat 4 buku"
+    },
+    {
+      "category": "Manifest Audit",
+      "check_name": "Manifest Dataset Status Classification",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Books 1-3 harus primary, Book 4 harus optional_comparison"
+    },
+    {
+      "category": "Manifest Audit",
+      "check_name": "Manifest Total Tokens Accuracy",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Total token pada manifest harus sesuai dengan hasil preprocessing"
+    },
+    {
+      "category": "Manifest Audit",
+      "check_name": "Manifest CSV Row Count",
+      "target_value": "4",
+      "actual_value": "4",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Manifest CSV harus memiliki 4 baris data"
+    },
+    {
+      "category": "Stopwords Audit",
+      "check_name": "Substantive Words Protection in stopwords_id.txt",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Kata substantif tidak boleh ada dalam stopwords: []"
+    },
+    {
+      "category": "Statistical Consistency",
+      "check_name": "Equation: Tokens After Clean == Preprocessed + Stopwords + SingleChar",
+      "target_value": "128882",
+      "actual_value": "128882",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Identitas matematis: 90894 + 32225 + 5763 = 128882"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Exact Token Cleaning Decomposition (3,562 Tokens)",
+      "target_value": "3562",
+      "actual_value": "3562",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Dekomposisi sekuensial bebas tumpang tindih: Penanda Halaman = 2080, Nomor Halaman Tunggal = 1173, Angka Romawi Halaman Depan = 122, Karakter Kontrol = 0, Penggabungan Kata Ulang = 8, Pola Pemenggalan Suku Kata = 162, Ejaan Huruf Tunggal = 17. Total = 3562 (Eksak cocok dengan selisih 3562)."
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: page_markers",
+      "target_value": "2080",
+      "actual_value": "2080",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning page_markers"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: standalone_num",
+      "target_value": "1173",
+      "actual_value": "1173",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning standalone_num"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: standalone_roman",
+      "target_value": "122",
+      "actual_value": "122",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning standalone_roman"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: control_chars",
+      "target_value": "0",
+      "actual_value": "0",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning control_chars"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: reduplication_merge",
+      "target_value": "8",
+      "actual_value": "8",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning reduplication_merge"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: syllables",
+      "target_value": "162",
+      "actual_value": "162",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning syllables"
+    },
+    {
+      "category": "Token Cleaning Decomposition",
+      "check_name": "Cleaning Category: spelled_letters",
+      "target_value": "17",
+      "actual_value": "17",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi kategori cleaning spelled_letters"
+    },
+    {
+      "category": "Character Decomposition",
+      "check_name": "Book 1 Character Diff Exact Decomposition",
+      "target_value": "5348",
+      "actual_value": "5348",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Book 1: 248 hal -> Header: 5100 char + Delimiter: 248 char = 5348"
+    },
+    {
+      "category": "Character Decomposition",
+      "check_name": "Book 2 Character Diff Exact Decomposition",
+      "target_value": "4468",
+      "actual_value": "4468",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Book 2: 208 hal -> Header: 4260 char + Delimiter: 208 char = 4468"
+    },
+    {
+      "category": "Character Decomposition",
+      "check_name": "Book 3 Character Diff Exact Decomposition",
+      "target_value": "5876",
+      "actual_value": "5876",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Book 3: 272 hal -> Header: 5604 char + Delimiter: 272 char = 5876"
+    },
+    {
+      "category": "Character Decomposition",
+      "check_name": "Book 4 Character Diff Exact Decomposition",
+      "target_value": "6756",
+      "actual_value": "6756",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Book 4: 312 hal -> Header: 6444 char + Delimiter: 312 char = 6756"
+    },
+    {
+      "category": "Character Decomposition",
+      "check_name": "Total Character Difference Exact Decomposition (22,448 Chars)",
+      "target_value": "22448",
+      "actual_value": "22448",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Dekomposisi eksak selisih karakter (22448): Header penanda halaman ('===== PAGE X =====\\n') = 21408 char (bukan 21.368, terdapat koreksi +40 char pada perhitungan panjang digit halaman) + Pemisah baris baru per halaman ('\\n') = 1040 char. Total = 22448 char (Eksak cocok 22.448 char). Catatan encoding: jumlah karakter dihitung berbasis Unicode characters (Python len(str)), bukan byte disk (yang mencakup multi-byte UTF-8)."
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Urutan Token Dipertahankan (Append Order)",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Token Duplikat Tidak Dihapus (List Data Structure)",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Stopwords Dibaca dari File Konfigurasi",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Case Folding Menggunakan Lowercase",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Tokenisasi Mendukung Karakter Unicode",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Kata Berulang Menggunakan Tanda Hubung Terlindungi",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Bebas dari Layanan AI / API Eksternal",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    },
+    {
+      "category": "Code Review",
+      "check_name": "Hanya Menggunakan Python Standard Library",
+      "target_value": "True",
+      "actual_value": "True",
+      "difference": "0",
+      "status": "PASS",
+      "notes": "Verifikasi implementasi pada scripts/preprocessing/preprocess_text.py"
+    }
+  ]
+}

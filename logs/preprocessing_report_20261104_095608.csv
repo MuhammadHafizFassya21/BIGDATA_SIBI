@@ -1,0 +1,5 @@
+book_id,title,dataset_status,source_file,output_file,raw_characters,tokens_before_cleaning,tokens_after_cleaning,stopwords_removed,single_character_tokens_excluded,hyphenated_syllable_patterns_removed,tokens_after_preprocessing,unique_tokens,processing_status,error_message
+1,Bahasa Indonesia: Aku Bisa! (Edisi Revisi),primary,book_001_SD_sd.txt,book_001_SD_sd_cleaned.txt,106345,15162,14173,3352,956,66,9865,2289,SUCCESS,
+2,Bahasa Indonesia: Kawan Seiring (Edisi Revisi),primary,book_002_SD_sd.txt,book_002_SD_sd_cleaned.txt,151740,20562,19890,4869,1084,1,13937,2532,SUCCESS,
+3,Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi),primary,book_003_SMP_mp.txt,book_003_SMP_mp_cleaned.txt,337917,44275,43476,11333,2064,4,30079,5851,SUCCESS,
+4,Bahasa Indonesia untuk SMP/MTs Kelas VII,optional_comparison,book_004_SMP_optional.txt,book_004_SMP_optional_cleaned.txt,403546,52445,51343,12671,1659,8,37013,6322,SUCCESS,

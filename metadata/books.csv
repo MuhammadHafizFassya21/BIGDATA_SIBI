@@ -1,0 +1,5 @@
+book_id,title,author,education_level,grade,subject,publication_year,isbn,page_count,source,filename,dataset_status
+1,Bahasa Indonesia: Aku Bisa! (Edisi Revisi),Sofie Dewayani,SD,I,Bahasa Indonesia,2023,978-623-118-362-0,248,SIBI,Bahasa_Indonesia_BS_KLS_I_Rev.pdf,primary
+2,Bahasa Indonesia: Kawan Seiring (Edisi Revisi),Gantino Habibi; S. Nailul Muna Aljamaliah,SD,III,Bahasa Indonesia,2025,978-634-00-3315-1,208,SIBI,Indonesia_BS_KLS_III_Revv.pdf,primary
+3,Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi),Eugenia Rakhma Subarna; Sofie Dewayani; Cicilia Erni Setyowati,SMP,VII,Bahasa Indonesia,2023,978-623-118-368-2,272,SIBI,Bahasa_Indonesia_BS_KLS_VII_Rev.pdf,primary
+4,Bahasa Indonesia untuk SMP/MTs Kelas VII,Titik Harsiata; Agus Trianto; E. Kosasih,SMP,VII,Bahasa Indonesia,2017,978-602-282-969-0,312,SIBI,B Indonesia SMP Kelas 7 BS press.pdf,optional_comparison

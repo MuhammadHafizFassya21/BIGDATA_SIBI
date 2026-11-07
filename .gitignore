@@ -1,0 +1,68 @@
+
+# ==========================================
+# ENVIRONMENT & SECRETS
+# ==========================================
+*.env
+.env
+.env.*
+!*.env.example
+!configs/minio/minio.env.example
+
+# ==========================================
+# PYTHON ENVIRONMENT & CACHE
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# ==========================================
+# ORIGINAL DATASET - DO NOT UPLOAD
+# ==========================================
+dataset/raw/
+dataset/optional/
+
+# ==========================================
+# GENERATED TEXT DATA
+# ==========================================
+extracted_text/raw/
+extracted_text/cleaned/
+
+# Generated BoW datasets
+dataset/processed/*.tsv
+
+# ==========================================
+# MINIO TEST FILES
+# ==========================================
+logs/minio_storage_test*
+
+# ==========================================
+# MAPREDUCE & ANALYTICS OUTPUT
+# ==========================================
+output/mapreduce/*/
+output/analytics/*/
+!output/mapreduce/.gitkeep
+!output/analytics/.gitkeep
+
+# ==========================================
+# IDE & OPERATING SYSTEM
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+!configs/hadoop/hadoop.env
+
+# Local configuration backups
+*.bak
+*.backup
+docker-compose.yml.backup
+
+# Local configuration backups
+*.bak
+*.backup
+docker-compose.yml.backup

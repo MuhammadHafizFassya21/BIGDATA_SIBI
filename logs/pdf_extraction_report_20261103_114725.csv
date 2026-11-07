@@ -1,0 +1,5 @@
+book_id,title,filename,dataset_status,expected_pages,extracted_pages,empty_pages,total_characters,output_file,extraction_status,error_message
+1,Bahasa Indonesia: Aku Bisa! (Edisi Revisi),Bahasa_Indonesia_BS_KLS_I_Rev.pdf,success,248,248,0,100997,C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_001_SD_sd.txt,success,
+2,Bahasa Indonesia: Kawan Seiring (Edisi Revisi),Indonesia_BS_KLS_III_Revv.pdf,success,208,208,0,147272,C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_002_SD_sd.txt,success,
+3,Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi),Bahasa_Indonesia_BS_KLS_VII_Rev.pdf,success,272,272,0,332041,C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_003_SMP_mp.txt,success,
+4,Bahasa Indonesia untuk SMP/MTs Kelas VII,B Indonesia SMP Kelas 7 BS press.pdf,success,312,312,1,396790,C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_004_SMP_optional.txt,success,

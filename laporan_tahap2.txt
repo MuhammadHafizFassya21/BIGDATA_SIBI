@@ -1,0 +1,180 @@
+================================================================================
+LAporan TAHAP 2 — IMPLEMENTASI PDF TEXT EXTRACTION
+================================================================================
+
+TANGGAL: 2026-11-03
+PROJEK: BIGDATA_SIBI — Analisis Frekuensi Kemunculan Kata pada Buku Digital
+         Bahasa Indonesia SIBI Menggunakan Hadoop MapReduce
+
+================================================================================
+1. FILE PYTHON YANG DIBUAT
+================================================================================
+  - scripts/extraction/extract_pdf.py
+  - File ini dibuat sesuai spesifikasi dalam B. sampai I dari dokumentasi
+  - Tidak memodifikasi file apa pun di proyek lama
+  - Hanya menambahkan file baru di direktori proyek
+
+================================================================================
+2. DEPENDENSI YG DIGUNAKAN
+================================================================================
+  - Python: 3.14.0 (tersedia)
+  - PyMuPDF (modul fitz): BELUM TERINSTAL (harus diinstall manual)
+  - Modul standar Python:
+    * csv   -> membaca books.csv
+    * json  -> membuat laporan JSON
+    * logging -> catatan proses
+    * pathlib -> pemrosesan path file
+    * datetime -> timestamp laporan
+  - Library eksternai yang DITERAMPILKAN: PyMuPDF
+
+================================================================================
+3. STATUS PYMUPAPER (FMUPDF)
+================================================================================
+  - Status: TIDAK TERSedia
+  - Coba import: "import fitz" -> ModuleNotFoundError: No module named 'fitz'
+  - Aksi yang dibutuhkan: Install manual dengan perintah:
+      pip install PyMuPDF
+  - Catatan: Peraturan melarang instalasi otomatis,Harus dilakukan manually
+            oleh pengguna/petugas
+
+================================================================================
+4. JUMLAH PDF YANG DITEMUKAN
+================================================================================
+  Total PDF ditemukan: 4 dari 4 yang terdaftar di books.csv
+
+  Status per buku:
+  1. Buku 1 (primary, SD):  dataset/raw/SD/Bahasa_Indonesia_BS_KLS_I_Rev.pdf --- DITEMUKAN
+  2. Buku 2 (primary, SD):  dataset/raw/SD/Indonesia_BS_KLS_III_Revv.pdf --- DITEMUKAN
+  3. Buku 3 (primary, SMP):  dataset/raw/SMP/Bahasa_Indonesia_BS_KLS_VII_Rev.pdf --- DITEMUKAN
+  4. Buku 4 (optional_comparison, SMP): dataset/optional/SMP_2017/B Indonesia SMP Kelas 7 BS press.pdf --- DITEMUKAN
+
+  Catatan peraturan: "Untuk status primary: dataset/raw/{education_level}/{filename}"
+                    "Untuk status optional_comparison: dataset/optional/SMP_2017/{filename}"
+  Semua lokasi PDF sesuai aturan yang ditetapkan.
+
+================================================================================
+5. JUMLAH PDF YANG BERHASIL DIEKSTRAK
+================================================================================
+  - 0 (nol) file TXT berhasil terbentuk
+  - Alasan: Ekstraksi text tidak bisa dimulai tanpa PyMuPDF (modul fitz)
+  - SEMUA 4 PDF ditemukan dan valid, tetapi teks tidak bisa diekstrak
+  - Jika PyMuPDF diinstal, ekspektasi: 4 file TXT akan terbentuk di
+    extracted_text/raw/
+
+================================================================================
+6. JUMLAH HALAMAN YANG BERHASIL DIPROSES
+================================================================================
+  - 0 (nol) halaman
+  - Alasan: Tidak bisa membuka PDF tanpa PyMuPDF
+  - Jika terinstal: Ekspektasi halaman per buku:
+    * Buku 1 (SD, 248 halaman per metadata): 248 halaman
+    * Buku 2 (SD, 208 halaman per metadata): 208 halaman
+    * Buku 3 (SMP, 272 halaman per metadata): 272 halaman
+    * Buku 4 (SMP, 312 halaman per metadata/2017): 312 halaman
+
+================================================================================
+7. JUMLAH HALAMAN KOSONG
+================================================================================
+  - 0 (nol) halaman kosong
+  - Catatan: Data belum tersedia karena ekstraksi belum dimulai
+
+================================================================================
+8. JUMLAH KARAKTER SETIAP BUKU
+================================================================================
+  - 0 (nol) karakter
+  - Alasan: Tidak bisa diekstrak sebelum PyMuPDF terinstal
+  - Jika terinstal: Total karakter akan dihitung dari seluruh halaman
+    tiap buku (menyertakan Unicode karakter Bahasa Indonesia)
+
+================================================================================
+9. LOOKASI SEKARANG file TXT (belum terbentuk)
+================================================================================
+  - Folder target: extracted_text/raw/
+  - Nama file yang seharusnya terbentuk (jika PyMuPDF terinstal):
+    book_001_sd_sd.txt
+    book_002_sd_sd.txt
+    book_003_smp_mp.txt
+    book_004_smp_optional.txt
+  
+  - Format isi file TXT (sebelum preprocessing):
+    ===== PAGE 1 =====
+    [teks halaman 1]
+    ===== PAGE 2 =====
+    [teks halaman 2]
+    ...dan seterusnya
+
+  - Encoding: UTF-8 tanpa normalisasi teks
+  - Menjaga tanda baca, angka, simbol, kata pun tidak dihapus/dimodifikasi
+
+================================================================================
+10. KENDAla ATAU ERROR YANG DITEMUKAN
+================================================================================
+
+  A. KENDALA UTAMA:
+    1. PyMuPDF (fitz) tidak terinstall di Python 3.14.0
+       -> Solusi: Install manual dengan "pip install PyMuPDF"
+
+    2. Ekstraksi text tidak bisa dimulai
+       -> Alasan: Modul pembuka PDF tidak tersedia
+
+  B. VALIDASI YANG LULUS (SEBELUM GAGAL DI PYMUPFPDF):
+    ✓ 4 baris data tervalidasi di books.csv
+    ✓ 12 kolom setiap baris terpenuhi
+    ✓ Semua 4 PDF ditemukan di sistem
+    ✓ Lokasi PDF sesuai dataset_status (primary/optional_comparison)
+    ✓ Tidak ada filename yang kosong di metadata
+    ✓ Tidak ada ISBN yang kosong di metadata
+    ✓ Struktur CSV valid dan bisa dibaca Python
+    ✓ Format header CSV pas: book_id,title,author,education_level,grade,
+       subject,publication_year,isbn,page_count,source,filename,dataset_status
+    ✓ Ketiga dataset primary dan satu optional teridentifikasi dengan benar
+
+  C. STRUKTUR YANG TELAH DIBUAT:
+    1. scripts/extraction/extract_pdf.py --- script ekstraksi utama
+    2. logs/extraction.log --- log operasi (terbuat saat pengujian)
+    3. extracted_text/raw/ --- folder tujuan file TXT (kosong, menunggu ekstraksi)
+    4. logs/ --- folder untuk laporan (akan terbentuk setelah PyMuPDF terinstall)
+    5. Metadata/books.csv --- tidak diubah (sudah diperbaiki pada tahap 1)
+    6. README.md --- tidak diubah (sudah diperbaiki pada tahap 1)
+
+  D. FILE BARU YANG TELAH DITAMBAHKAN (peraturan: "Hanya tambah file baru"):
+    1. scripts/extraction/extract_pdf.py
+    2. logs/extraction.log
+    3. Laporan JSON/CSV akan dibuat setelah PyMuPDF terinstal dan
+       ekstraksi sukses
+
+  E. FILE/ FOLDER YANG TIDAK DIUBAH/ DIHAPUS (penting!):
+    1. Semua file PDF di dataset/raw/ dan dataset/optional/SMP_2017/
+       --- tidak dipindah, tidak diganti nama, tidak dihapus
+    2. Folder hadoop-wordcount di references/ --- utuh dan tidak disentuh
+    3. books.csv --- hanya diperbaiki header/author/filename, tidak dihapus
+    4. README.md --- hanya diperbaiki isi dan encoding, tidak dihapus
+    5. Semua konfigurasi Docker/Hadoop --- tidak disentuh
+    6. Kode Mapper/Reducer/ --- tidak dibuat di tahap ini
+
+================================================================================
+SELESAI LAPILORAN TAHAP 2
+================================================================================
+
+KESIMPulan Umum:
+- Semua 4 PDF buku SIBI berhasil ditemukan dan tervalidasi posisinya
+- Validasi metadata (books.csv) lulus semuanya: 4 baris, 12 kolom, data valid
+- Script ekstraksi (extract_pdf.py) telah dibuat sesuai spesifikasi
+- Masalah teknis: PyMuPDF (fitz) tidak tersedia di environment Python 3.14.0
+- Tindakan berikutnya: Install PyMuPDF secara manual dengan "pip install PyMuPDF"
+- Setelah PyMuPDF terinstall, menjalankan ulang extract_pdf.py akan:
+  * Menghasilkan 4 file TXT di extracted_text/raw/
+  * Menghasilkan laporan JSON dan CSV di logs/
+  * Membandingkan halaman aktual vs metadata
+  * Menghitung karakter dan halaman kosong
+
+Batasan yang dipatuhi:
+- ✅ Tidak menghapus file/folder lama
+- ✅ Tidak memindahkan/ganti nama PDF
+- ✅ Tidak mengubah books.csv atau README.md (hanya dibaca)
+- ✅ Tidak mengubah folder hadoop-wordcount
+- ✅ Tidak menginstal package otomatis
+- ✅ Tidak menggunakan AI API
+- ✅ Tidak melakukan OCR
+- ✅ Tidak menimpa file output yang sudah ada
+- ✅ Hanya menambahkan file baru di proyek

@@ -1,0 +1,85 @@
+2026-11-03 11:31:08,946 - INFO - === MEMULAI PDF TEXT EXTRACTION ===
+2026-11-03 11:31:08,947 - INFO - BIGDATA_SIBI - Analisis Frekuensi Kemunculan Kata pada Buku Digital
+2026-11-03 11:31:08,948 - WARNING - PyMuPDF (fitz) tidak tersedia
+2026-11-03 11:31:08,949 - INFO - Baca 4 buku dari metadata
+2026-11-03 11:31:08,949 - INFO - === VALIDASI DATASET ===
+2026-11-03 11:31:08,950 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Bahasa_Indonesia_BS_KLS_I_Rev.pdf
+2026-11-03 11:31:08,952 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Indonesia_BS_KLS_III_Revv.pdf
+2026-11-03 11:31:08,953 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SMP\Bahasa_Indonesia_BS_KLS_VII_Rev.pdf
+2026-11-03 11:31:08,954 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\optional\SMP_2017\B Indonesia SMP Kelas 7 BS press.pdf
+2026-11-03 11:31:08,957 - INFO - Validasi struktur CSV...
+2026-11-03 11:31:08,958 - INFO - Jumlah baris data: 4 (harus: 4)
+2026-11-03 11:31:08,958 - INFO - Jumlah kolom header: 12 (harus: 12)
+2026-11-03 11:31:08,958 - INFO - === MEMULAI EKSTRAKSI TEKS ===
+2026-11-03 11:37:35,838 - INFO - === MEMULAI PDF TEXT EXTRACTION ===
+2026-11-03 11:37:35,838 - INFO - BIGDATA_SIBI - Analisis Frekuensi Kemunculan Kata pada Buku Digital
+2026-11-03 11:37:35,839 - WARNING - PyMuPDF (fitz) tidak tersedia
+2026-11-03 11:37:35,840 - INFO - Baca 4 buku dari metadata
+2026-11-03 11:37:35,840 - INFO - === VALIDASI DATASET ===
+2026-11-03 11:37:35,840 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Bahasa_Indonesia_BS_KLS_I_Rev.pdf
+2026-11-03 11:37:35,841 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Indonesia_BS_KLS_III_Revv.pdf
+2026-11-03 11:37:35,841 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SMP\Bahasa_Indonesia_BS_KLS_VII_Rev.pdf
+2026-11-03 11:37:35,842 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\optional\SMP_2017\B Indonesia SMP Kelas 7 BS press.pdf
+2026-11-03 11:37:35,842 - INFO - Validasi struktur CSV...
+2026-11-03 11:37:35,842 - INFO - Jumlah baris data: 4 (harus: 4)
+2026-11-03 11:37:35,843 - INFO - Jumlah kolom header: 12 (harus: 12)
+2026-11-03 11:37:35,843 - INFO - === MEMULAI EKSTRAKSI TEKS ===
+2026-11-03 11:42:19,673 - INFO - === MEMULAI PDF TEXT EXTRACTION ===
+2026-11-03 11:42:19,673 - INFO - BIGDATA_SIBI - Analisis Frekuensi Kemunculan Kata pada Buku Digital
+2026-11-03 11:42:19,846 - INFO - PyMuPDF (fitz) tersedia
+2026-11-03 11:42:19,846 - INFO - Baca 4 buku dari metadata
+2026-11-03 11:42:19,847 - INFO - === VALIDASI DATASET ===
+2026-11-03 11:42:19,847 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Bahasa_Indonesia_BS_KLS_I_Rev.pdf
+2026-11-03 11:42:19,848 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Indonesia_BS_KLS_III_Revv.pdf
+2026-11-03 11:42:19,848 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SMP\Bahasa_Indonesia_BS_KLS_VII_Rev.pdf
+2026-11-03 11:42:19,849 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\optional\SMP_2017\B Indonesia SMP Kelas 7 BS press.pdf
+2026-11-03 11:42:19,849 - INFO - Validasi struktur CSV...
+2026-11-03 11:42:19,850 - INFO - Jumlah baris data: 4 (harus: 4)
+2026-11-03 11:42:19,850 - INFO - Jumlah kolom header: 12 (harus: 12)
+2026-11-03 11:42:19,851 - INFO - === MEMULAI EKSTRAKSI TEKS ===
+2026-11-03 11:46:36,199 - INFO - === MEMULAI PDF TEXT EXTRACTION ===
+2026-11-03 11:46:36,200 - INFO - BIGDATA_SIBI - Analisis Frekuensi Kemunculan Kata pada Buku Digital
+2026-11-03 11:46:36,201 - WARNING - PyMuPDF (pymupdf) tidak tersedia
+2026-11-03 11:46:36,203 - INFO - Baca 4 buku dari metadata
+2026-11-03 11:46:36,203 - INFO - === VALIDASI DATASET ===
+2026-11-03 11:46:36,203 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Bahasa_Indonesia_BS_KLS_I_Rev.pdf
+2026-11-03 11:46:36,204 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Indonesia_BS_KLS_III_Revv.pdf
+2026-11-03 11:46:36,204 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SMP\Bahasa_Indonesia_BS_KLS_VII_Rev.pdf
+2026-11-03 11:46:36,205 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\optional\SMP_2017\B Indonesia SMP Kelas 7 BS press.pdf
+2026-11-03 11:46:36,205 - INFO - Validasi struktur CSV...
+2026-11-03 11:46:36,207 - INFO - Jumlah baris data: 4 (harus: 4)
+2026-11-03 11:46:36,208 - INFO - Jumlah kolom header: 12 (harus: 12)
+2026-11-03 11:46:36,209 - INFO - === MEMULAI EKSTRAKSI TEKS ===
+2026-11-03 11:47:19,386 - INFO - === MEMULAI PDF TEXT EXTRACTION ===
+2026-11-03 11:47:19,387 - INFO - BIGDATA_SIBI - Analisis Frekuensi Kemunculan Kata pada Buku Digital
+2026-11-03 11:47:19,622 - INFO - PyMuPDF (pymupdf) tersedia
+2026-11-03 11:47:19,622 - INFO - Baca 4 buku dari metadata
+2026-11-03 11:47:19,623 - INFO - === VALIDASI DATASET ===
+2026-11-03 11:47:19,623 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Bahasa_Indonesia_BS_KLS_I_Rev.pdf
+2026-11-03 11:47:19,623 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SD\Indonesia_BS_KLS_III_Revv.pdf
+2026-11-03 11:47:19,624 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\raw\SMP\Bahasa_Indonesia_BS_KLS_VII_Rev.pdf
+2026-11-03 11:47:19,624 - INFO - ✓ PDF ditemukan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\dataset\optional\SMP_2017\B Indonesia SMP Kelas 7 BS press.pdf
+2026-11-03 11:47:19,624 - INFO - Validasi struktur CSV...
+2026-11-03 11:47:19,625 - INFO - Jumlah baris data: 4 (harus: 4)
+2026-11-03 11:47:19,625 - INFO - Jumlah kolom header: 12 (harus: 12)
+2026-11-03 11:47:19,625 - INFO - === MEMULAI EKSTRAKSI TEKS ===
+2026-11-03 11:47:20,225 - INFO - Teks berhasil disimpan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_001_SD_sd.txt
+2026-11-03 11:47:20,226 - INFO - ✓ Bahasa Indonesia: Aku Bisa! (Edisi Revisi): 248/248 halaman diekstrak, 100997 karakter -> book_001_SD_sd.txt
+2026-11-03 11:47:20,716 - INFO - Teks berhasil disimpan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_002_SD_sd.txt
+2026-11-03 11:47:20,716 - INFO - ✓ Bahasa Indonesia: Kawan Seiring (Edisi Revisi): 208/208 halaman diekstrak, 147272 karakter -> book_002_SD_sd.txt
+2026-11-03 11:47:24,975 - INFO - Teks berhasil disimpan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_003_SMP_mp.txt
+2026-11-03 11:47:24,976 - INFO - ✓ Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi): 272/272 halaman diekstrak, 332041 karakter -> book_003_SMP_mp.txt
+2026-11-03 11:47:25,736 - INFO - Teks berhasil disimpan: C:\Users\user\Documents\SEMESTER 7\BIG DATA\BIGDATA_SIBI\extracted_text\raw\book_004_SMP_optional.txt
+2026-11-03 11:47:25,737 - INFO - ✓ Bahasa Indonesia untuk SMP/MTs Kelas VII: 312/312 halaman diekstrak, 396790 karakter -> book_004_SMP_optional.txt
+2026-11-03 11:47:25,739 - INFO - Laporan JSON disimpan: logs\pdf_extraction_report_20261103_114725.json
+2026-11-03 11:47:25,741 - INFO - Laporan CSV disimpan: logs\pdf_extraction_report_20261103_114725.csv
+2026-11-03 11:47:25,742 - INFO - === RINGKASAN EKSTRAKSI ===
+2026-11-03 11:47:25,743 - INFO - Total buku: 4
+2026-11-03 11:47:25,744 - INFO - Berhasil: 4
+2026-11-03 11:47:25,744 - INFO - Gagal: 0
+2026-11-03 11:47:25,745 - INFO - Total halaman expected: 1040
+2026-11-03 11:47:25,745 - INFO - Total halaman actual: 1040
+2026-11-03 11:47:25,745 - INFO - Total halaman kosong: 1
+2026-11-03 11:47:25,746 - INFO - Total karakter: 977100
+2026-11-03 11:47:25,746 - INFO - PyMuPDF tersedia - ekstraksi selesai
+2026-11-03 11:47:25,747 - INFO - === SELESAI ===
