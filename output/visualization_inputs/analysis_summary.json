@@ -1,0 +1,41 @@
+{
+    "project": "BIGDATA_SIBI",
+    "status": "PASS",
+    "input_tokens": 53881,
+    "distinct_book_token_pairs": 10672,
+    "total_frequency": 53881,
+    "sorting_verified": true,
+    "missing_keys": 0,
+    "extra_keys": 0,
+    "frequency_mismatches": 0,
+    "books": [
+        [
+            "1",
+            "Bahasa Indonesia: Aku Bisa! (Edisi Revisi)",
+            9865,
+            2289,
+            "indonesia",
+            185,
+            18.7532
+        ],
+        [
+            "2",
+            "Bahasa Indonesia: Kawan Seiring (Edisi Revisi)",
+            13937,
+            2532,
+            "cerita",
+            188,
+            13.4893
+        ],
+        [
+            "3",
+            "Bahasa Indonesia untuk SMP/MTs Kelas VII (Edisi Revisi)",
+            30079,
+            5851,
+            "buku",
+            362,
+            12.035
+        ]
+    ],
+    "top_n": 20
+}

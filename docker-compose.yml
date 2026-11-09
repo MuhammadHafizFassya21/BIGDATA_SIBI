@@ -38,8 +38,8 @@ services:
       - ./configs/minio/minio.env
     ports:
       # Bound strictly to 127.0.0.1 (localhost) to prevent public exposure
-      - "127.0.0.1:19000:9000"   # MinIO S3 API Endpoint
-      - "127.0.0.1:19001:9001"   # MinIO Web Console UI
+      - "127.0.0.1:19000:9000" # MinIO S3 API Endpoint
+      - "127.0.0.1:19001:9001" # MinIO Web Console UI
     volumes:
       - minio_data:/data
     networks:
@@ -59,10 +59,10 @@ services:
   minio-client:
     image: minio/mc:RELEASE.2024-05-09T17-04-24Z
     container_name: sibi_minio_client
-    profiles: ["tools"]
+    profiles: [ "tools" ]
     restart: "no"
-    entrypoint: ["/bin/sh", "-c"]
-    command: ["tail -f /dev/null"]
+    entrypoint: [ "/bin/sh", "-c" ]
+    command: [ "tail -f /dev/null" ]
     depends_on:
       - minio
     networks:
@@ -85,7 +85,7 @@ services:
       - CLUSTER_NAME=sibi_hadoop_cluster
     ports:
       # NameNode Web UI bound to localhost
-      - "127.0.0.1:9870:9870"
+      - "127.0.0.1:19870:9870"
       # NOTE: Port 9000 (HDFS RPC) is INTENTIONALLY NOT exposed to host Windows
       # to prevent collision with MinIO S3 API on localhost:9000.
       # DataNode and intra-cluster jobs access HDFS via internal hdfs://namenode:9000.
@@ -133,4 +133,3 @@ services:
         reservations:
           cpus: "0.20"
           memory: 256M
-

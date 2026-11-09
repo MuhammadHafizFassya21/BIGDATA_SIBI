@@ -1,0 +1,146 @@
+{
+  "project": "BIGDATA_SIBI",
+  "timestamp_utc": "2026-11-09T14:55:41.501539+00:00",
+  "endpoint": "http://127.0.0.1:19000",
+  "status": "success",
+  "file_count_expected": 17,
+  "files": [
+    {
+      "source": "dataset/raw/SD/Bahasa_Indonesia_BS_KLS_I_Rev.pdf",
+      "bucket": "sibi-raw",
+      "key": "dataset_sibi/raw/SD/Bahasa_Indonesia_BS_KLS_I_Rev.pdf",
+      "size_bytes": 13876470,
+      "sha256": "b62b2d7ee671cfcd5ccdd9c6dcac8442df49c0c79462984dd2fc4bbe6473a6ce",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/raw/SD/Indonesia_BS_KLS_III_Revv.pdf",
+      "bucket": "sibi-raw",
+      "key": "dataset_sibi/raw/SD/Indonesia_BS_KLS_III_Revv.pdf",
+      "size_bytes": 14376524,
+      "sha256": "04613829927d1018ae054c99158b939e3577d06fde9df818091153f850f80956",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/raw/SMP/Bahasa_Indonesia_BS_KLS_VII_Rev.pdf",
+      "bucket": "sibi-raw",
+      "key": "dataset_sibi/raw/SMP/Bahasa_Indonesia_BS_KLS_VII_Rev.pdf",
+      "size_bytes": 22012091,
+      "sha256": "638acfc5e34c1c7e12534c0386b87155c86880c24c755f801db633ed102ea06b",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/optional/SMP_2017/B Indonesia SMP Kelas 7 BS press.pdf",
+      "bucket": "sibi-raw",
+      "key": "dataset_sibi/optional/SMP_2017/B Indonesia SMP Kelas 7 BS press.pdf",
+      "size_bytes": 11415860,
+      "sha256": "907950fc264825922f7e09c63e806b272ce3bcadf9ac4eb8054a8923e4d2a15b",
+      "status": "verified"
+    },
+    {
+      "source": "metadata/books.csv",
+      "bucket": "sibi-raw",
+      "key": "dataset_sibi/metadata/books.csv",
+      "size_bytes": 875,
+      "sha256": "38dbc4c2dbf0a614a22151fe08814187480ac1e305836ad6ca2c4651217bf3df",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/raw/book_001_SD_sd.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/raw/book_001_SD_sd.txt",
+      "size_bytes": 111458,
+      "sha256": "fa888e5b1a1ae7aaec69499a4a1b70ee90b4755e84069065880ec83863a44e90",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/raw/book_002_SD_sd.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/raw/book_002_SD_sd.txt",
+      "size_bytes": 159476,
+      "sha256": "0dbe9e5ae2a372d6da1023425d6b133ec1c7feabe578deb9c203c19f2d367915",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/raw/book_003_SMP_mp.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/raw/book_003_SMP_mp.txt",
+      "size_bytes": 349190,
+      "sha256": "2f54564d99b3e497c2c4966cb6b36786c7cca286f70b2b848e6a2ca4f005a952",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/raw/book_004_SMP_optional.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/raw/book_004_SMP_optional.txt",
+      "size_bytes": 416465,
+      "sha256": "ec1151be93c488b23173d2ab330898c774df5e8f4629e44882f6867340650868",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/cleaned/book_001_SD_sd_cleaned.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/cleaned/book_001_SD_sd_cleaned.txt",
+      "size_bytes": 78933,
+      "sha256": "5e62cc368028ce7d35de4b2ede049865d597bacad26cceda39243e54e08d170f",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/cleaned/book_002_SD_sd_cleaned.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/cleaned/book_002_SD_sd_cleaned.txt",
+      "size_bytes": 117761,
+      "sha256": "46ac6418181f6c3df3ac7841ac5afd493c1ecf58284fa4622e9cfb21238da25d",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/cleaned/book_003_SMP_mp_cleaned.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/cleaned/book_003_SMP_mp_cleaned.txt",
+      "size_bytes": 252082,
+      "sha256": "03216467434e6801ddc2ff8e2047aa5e8da4ee36be818c5564118503a47503d3",
+      "status": "verified"
+    },
+    {
+      "source": "extracted_text/cleaned/book_004_SMP_optional_cleaned.txt",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/extracted_text/cleaned/book_004_SMP_optional_cleaned.txt",
+      "size_bytes": 319117,
+      "sha256": "2e1f9cee0e24f11485ae1d8dd301765e89c95309fc3f00d8b9ee0db9bd823373",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/processed/bow_input.tsv",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/processed/bow_input.tsv",
+      "size_bytes": 858787,
+      "sha256": "edc8b3aa7afe1635a6b02259ba9d868cafc5b6afbb92e32f9f7da9f603626d0a",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/processed/bow_input_primary.tsv",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/processed/bow_input_primary.tsv",
+      "size_bytes": 502657,
+      "sha256": "bf6ead9afae7175dee53c0964824cc06bc44235c6ee5fc305342b33bc3f0e8e0",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/processed/bow_manifest.csv",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/processed/bow_manifest.csv",
+      "size_bytes": 572,
+      "sha256": "f6113a1837edbf12858899b66427d8fc394d8eb99886282e61c1168514a34f75",
+      "status": "verified"
+    },
+    {
+      "source": "dataset/processed/bow_manifest.json",
+      "bucket": "sibi-processed",
+      "key": "dataset_sibi/processed/bow_manifest.json",
+      "size_bytes": 1561,
+      "sha256": "73b10e2e01a9450796485359b899cc866692e9f91013fc976927df06adc73b82",
+      "status": "verified"
+    }
+  ],
+  "verified_file_count": 17
+}

@@ -1,0 +1,16 @@
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docker-compose.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docker/hadoop/Dockerfile', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/mapreduce/mapper.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/mapreduce/reducer.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/mapreduce/run_mapreduce.sh', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/minio/init_minio.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/minio/upload_dataset.ps1', LF will be replaced by CRLF the next time Git touches it
+ docker-compose.yml                 |  13 [32m++[m[31m-[m
+ docker/hadoop/Dockerfile           |  39 [32m++++[m[31m----[m
+ scripts/mapreduce/mapper.py        |  36 [32m++++[m[31m---[m
+ scripts/mapreduce/reducer.py       |  60 [32m++++++++[m[31m---[m
+ scripts/mapreduce/run_mapreduce.sh | 162 [32m+++++++++++++++[m[31m---------------[m
+ scripts/minio/init_minio.ps1       | 149 [32m+++++++++++++++[m[31m------------[m
+ scripts/minio/upload_dataset.ps1   | 199 [32m++++++++++++++++++++++++++++[m[31m---------[m
+ 7 files changed, 409 insertions(+), 249 deletions(-)

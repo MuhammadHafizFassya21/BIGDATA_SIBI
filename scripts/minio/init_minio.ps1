@@ -1,103 +1,128 @@
-<#
+﻿<#
 .SYNOPSIS
-    MinIO Initialization Script for Project BIGDATA_SIBI.
+    Initializes MinIO buckets for BIGDATA_SIBI.
 .DESCRIPTION
-    Initializes MinIO object storage buckets:
-    - sibi-raw        : Raw PDFs and metadata
-    - sibi-processed  : Cleaned tokens, TSV inputs, manifests
-    - sibi-output     : MapReduce output data and execution logs
-    Execution supports both docker container 'mc' (MinIO client) or local host 'mc.exe'.
+    Uses a temporary Docker volume for MinIO Client configuration.
+    The alias and credentials persist across short-lived mc containers
+    during this script, then the temporary volume is removed.
 #>
 
 [CmdletBinding()]
 param (
-    [string]$Endpoint = "http://127.0.0.1:9000",
+    [string]$Network = "sibi_network",
+    [string]$McImage = "quay.io/minio/mc:RELEASE.2025-08-13T08-35-41Z",
+    [string]$Endpoint = "http://minio:9000",
     [string]$EnvFile = ""
 )
 
 $ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$ProjectRoot = (Resolve-Path "$ScriptDir\..\..").Path
+$ProjectRoot = (Resolve-Path (Join-Path $ScriptDir "..\..")).Path
 
 if (-not $EnvFile) {
-    $EnvFile = "$ProjectRoot\configs\minio\minio.env"
+    $EnvFile = Join-Path $ProjectRoot "configs\minio\minio.env"
 }
 
-Write-Host "========================================================================" -ForegroundColor Cyan
-Write-Host " [BIGDATA_SIBI] MinIO Bucket Initialization" -ForegroundColor Cyan
-Write-Host "========================================================================" -ForegroundColor Cyan
-Write-Host " Project Root : $ProjectRoot"
-Write-Host " Config File  : $EnvFile"
+Write-Host "============================================================" -ForegroundColor Cyan
+Write-Host " BIGDATA_SIBI - MinIO Bucket Initialization" -ForegroundColor Cyan
+Write-Host "============================================================" -ForegroundColor Cyan
+Write-Host "Project root : $ProjectRoot"
+Write-Host "Docker network: $Network"
+Write-Host "MinIO endpoint: $Endpoint"
+Write-Host "Environment file: $EnvFile"
 
-if (-not (Test-Path $EnvFile)) {
-    Write-Error "MinIO config file not found: $EnvFile"
-    exit 1
+if (-not (Test-Path -LiteralPath $EnvFile -PathType Leaf)) {
+    throw "MinIO environment file not found: $EnvFile"
 }
 
-# Parse environment file
+# Read credentials without displaying them.
 $MinioUser = ""
 $MinioPass = ""
 
-Get-Content $EnvFile | ForEach-Object {
+Get-Content -LiteralPath $EnvFile | ForEach-Object {
     $line = $_.Trim()
     if ($line -and -not $line.StartsWith("#")) {
         $parts = $line.Split("=", 2)
         if ($parts.Count -eq 2) {
-            $k = $parts[0].Trim()
-            $v = $parts[1].Trim()
-            if ($k -eq "MINIO_ROOT_USER") { $MinioUser = $v }
-            if ($k -eq "MINIO_ROOT_PASSWORD") { $MinioPass = $v }
+            $key = $parts[0].Trim()
+            $value = $parts[1].Trim()
+            if ($key -eq "MINIO_ROOT_USER") { $MinioUser = $value }
+            if ($key -eq "MINIO_ROOT_PASSWORD") { $MinioPass = $value }
         }
     }
 }
 
-if (-not $MinioUser -or -not $MinioPass -or $MinioPass -eq "REPLACE_WITH_UNIQUE_PASSWORD_MIN_8_CHARS") {
-    Write-Warning "MinIO credentials are not configured or still using default placeholder."
-    Write-Warning "Please configure a valid password in $EnvFile before initializing buckets."
+if ([string]::IsNullOrWhiteSpace($MinioUser) -or
+    [string]::IsNullOrWhiteSpace($MinioPass) -or
+    $MinioPass -eq "REPLACE_WITH_UNIQUE_PASSWORD_MIN_8_CHARS") {
+    throw "MINIO_ROOT_USER or MINIO_ROOT_PASSWORD is missing or still uses the placeholder. Check configs/minio/minio.env locally."
 }
 
-# Check if Docker container sibi_minio is running
-$UseDockerClient = $false
-$ContainerRunning = docker ps --filter "name=sibi_minio" --filter "status=running" --format "{{.Names}}"
+# Verify Docker network and MinIO container.
+docker network inspect $Network *> $null
+if ($LASTEXITCODE -ne 0) {
+    throw "Docker network '$Network' does not exist."
+}
 
-if ($ContainerRunning) {
-    Write-Host " Detected running 'sibi_minio' container." -ForegroundColor Green
-    $UseDockerClient = $true
-} else {
-    Write-Host " MinIO container is not running locally. Checking local 'mc' CLI..." -ForegroundColor Yellow
-    if (Get-Command mc -ErrorAction SilentlyContinue) {
-        Write-Host " Found local 'mc' executable." -ForegroundColor Green
-    } else {
-        Write-Warning "Neither MinIO container nor local 'mc' CLI is currently active."
-        Write-Warning "Run this script after starting containers: docker compose up -d"
-        exit 0
-    }
+$runningState = docker inspect --format '{{.State.Running}}' sibi_minio 2>$null
+if ($LASTEXITCODE -ne 0 -or (($runningState -join "").Trim() -ne "true")) {
+    throw "Container sibi_minio is not running. Start it with: docker compose up -d minio"
 }
 
 $Buckets = @("sibi-raw", "sibi-processed", "sibi-output")
+$McConfigVolume = "sibi_mc_init_$([guid]::NewGuid().ToString('N'))"
+$VolumeCreated = $false
 
-if ($UseDockerClient) {
-    # Check if minio-client container is available, else use minio container directly or docker run
-    Write-Host " Initializing MinIO alias 'sibi_local' via Docker..."
-    docker run --rm --network sibi_network minio/mc:RELEASE.2024-05-09T17-04-24Z `
-        alias set sibi_local http://minio:9000 "$MinioUser" "$MinioPass" | Out-Null
+function Invoke-Mc {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string[]]$McArgs
+    )
 
-    foreach ($bucket in $Buckets) {
-        Write-Host " Creating bucket '$bucket' (idempotent)..."
-        docker run --rm --network sibi_network minio/mc:RELEASE.2024-05-09T17-04-24Z `
-            mb --ignore-existing "sibi_local/$bucket"
-    }
-} else {
-    Write-Host " Initializing MinIO alias 'sibi_local' via local host mc..."
-    mc alias set sibi_local $Endpoint "$MinioUser" "$MinioPass"
-    foreach ($bucket in $Buckets) {
-        Write-Host " Creating bucket '$bucket' (idempotent)..."
-        mc mb --ignore-existing "sibi_local/$bucket"
+    $dockerArgs = @(
+        "run", "--rm",
+        "--network", $Network,
+        "--env", "MC_CONFIG_DIR=/mc-config",
+        "--mount", "type=volume,source=$McConfigVolume,target=/mc-config",
+        $McImage
+    )
+    $dockerArgs += $McArgs
+
+    & docker @dockerArgs
+    if ($LASTEXITCODE -ne 0) {
+        throw "MinIO Client command failed (exit code $LASTEXITCODE). Review the Docker error above. Command arguments are suppressed to protect credentials."
     }
 }
 
-Write-Host "========================================================================" -ForegroundColor Green
-Write-Host " [SUCCESS] MinIO Buckets Initialization Completed: $($Buckets -join ', ')" -ForegroundColor Green
-Write-Host "========================================================================" -ForegroundColor Green
+try {
+    docker volume create $McConfigVolume | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        throw "Could not create temporary Docker volume for MinIO Client configuration."
+    }
+    $VolumeCreated = $true
 
+    Write-Host "`nConfiguring MinIO Client alias..." -ForegroundColor Cyan
+    Invoke-Mc -McArgs @("alias", "set", "sibi_local", $Endpoint, $MinioUser, $MinioPass)
+
+    Write-Host "`nChecking MinIO connection..." -ForegroundColor Cyan
+    Invoke-Mc -McArgs @("ls", "sibi_local")
+
+    foreach ($bucket in $Buckets) {
+        Write-Host "`nEnsuring bucket exists: $bucket" -ForegroundColor Cyan
+        Invoke-Mc -McArgs @("mb", "--ignore-existing", "sibi_local/$bucket")
+    }
+
+    Write-Host "`nFinal bucket listing:" -ForegroundColor Green
+    Invoke-Mc -McArgs @("ls", "sibi_local")
+
+    Write-Host "`n[SUCCESS] All required MinIO buckets are available." -ForegroundColor Green
+}
+finally {
+    if ($VolumeCreated) {
+        docker volume rm $McConfigVolume | Out-Null
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Temporary MinIO Client volume could not be removed: $McConfigVolume"
+        }
+    }
+}

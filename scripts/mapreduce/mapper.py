@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Hadoop Streaming Mapper for Project BIGDATA_SIBI.
-Reads 'book_id\\ttoken' from stdin.
-Emits 'book_id\\ttoken\\t1' to stdout.
+Reads 'book_id\ttoken' from stdin.
+Emits 'book_id\ttoken\t1' to stdout.
 Validates input format and logs invalid records to stderr.
 """
 
@@ -13,34 +13,42 @@ def process_mapper():
     """Read lines from standard input and emit key-value pairs."""
     for line_num, line in enumerate(sys.stdin, start=1):
         line = line.rstrip("\r\n")
+
         if not line:
-            # Skip empty lines silently
             continue
 
         parts = line.split("\t")
+
         if len(parts) != 2:
             sys.stderr.write(
-                f"[MAPPER ERROR] Line {line_num}: Expected 2 tab-separated fields, "
-                f"got {len(parts)} -> '{line[:50]}'\n"
+                "[MAPPER ERROR] Line {}: Expected 2 tab-separated fields, "
+                "got {} -> '{}'\n".format(
+                    line_num, len(parts), line[:50]
+                )
             )
             continue
 
-        book_id, token = parts[0].strip(), parts[1].strip()
+        book_id = parts[0].strip()
+        token = parts[1].strip()
 
-        # Validation: book_id must be a non-empty digit/identifier (1, 2, 3, 4)
         if not book_id:
-            sys.stderr.write(f"[MAPPER ERROR] Line {line_num}: Empty book_id\n")
+            sys.stderr.write(
+                "[MAPPER ERROR] Line {}: Empty book_id\n".format(line_num)
+            )
             continue
 
-        # Validation: token must not be empty
         if not token:
-            sys.stderr.write(f"[MAPPER ERROR] Line {line_num}: Empty token for book {book_id}\n")
+            sys.stderr.write(
+                "[MAPPER ERROR] Line {}: Empty token for book {}\n".format(
+                    line_num, book_id
+                )
+            )
             continue
 
-        # Emit standard 3-field intermediate tuple: book_id \t token \t 1
-        sys.stdout.write(f"{book_id}\t{token}\t1\n")
+        sys.stdout.write(
+            "{}\t{}\t1\n".format(book_id, token)
+        )
 
 
 if __name__ == "__main__":
     process_mapper()
-
